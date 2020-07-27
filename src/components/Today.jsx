@@ -26,6 +26,7 @@ class Today extends React.Component {
             day: [],
             description: [],
             icon: [],
+            iconImg: [],
 
         }
     }
@@ -38,6 +39,8 @@ class Today extends React.Component {
             this.setState({ low: result.data.daily[0].temp.min })
             this.setState({ current: result.data.current.temp })
             console.log(this.state.low)
+            this.setState({ icon: result.data.current.weather[0].icon })
+            this.setState({ iconImg: `http://openweathermap.org/img/wn/${this.state.icon}@2x.png`})
             this.setState({ description: result.data.current.weather[0].description })
         }
         catch {
@@ -46,7 +49,6 @@ class Today extends React.Component {
     }
 
     componentDidMount() {
-        console.log(call)
         this.getWeather()
     }
 
@@ -55,6 +57,7 @@ class Today extends React.Component {
             <div>
                 <h2>Current Temperature in Atlanta: {this.state.current}</h2>
                 <h4>{this.state.description}</h4>
+                <img src={this.state.iconImg} />
                 <h3>Today's High: { this.state.high }</h3>
                 <h3>Today's Low: { this.state.low }</h3>
 
