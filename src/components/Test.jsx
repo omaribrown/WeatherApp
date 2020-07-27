@@ -10,7 +10,7 @@ const API_KEY = `61ad8827b626c5fad8ae7a0ba951db32`;
 let daysOnly = `current,minutely,hourly`;
 // let call = 'https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon=' + lon + '&exclude=' + daysOnly + '&appid=' + API_KEY;
 // let call2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${daysOnly}&appid=${API_KEY}`;
-let call = "https://api.openweathermap.org/data/2.5/onecall?lat=33.749&lon=-84.388&exclude=current,minutely,hourly&units=imperial&appid=61ad8827b626c5fad8ae7a0ba951db32";
+let call = "https://api.openweathermap.org/data/2.5/onecall?lat=33.749&lon=-84.388&exclude=minutely,hourly&units=imperial&appid=61ad8827b626c5fad8ae7a0ba951db32";
 
 
 class Test extends React.Component {
@@ -19,11 +19,14 @@ class Test extends React.Component {
 
         this.state = {
             info: [],
+            current: [],
             high: [],
             low: [],
             icon: [],
             day: [],
-            conditions: []
+            description: [],
+            icon: [],
+            
         }
     }
     
@@ -33,7 +36,9 @@ class Test extends React.Component {
             this.setState({ info: result.data })
             this.setState({ high: result.data.daily[0].temp.max })
             this.setState({ low: result.data.daily[0].temp.min })
+            this.setState({ current: result.data.current.temp })
             console.log(this.state.low)
+            this.setState({ conditions: })
         }
         catch {
             console.error("somethings not right brah")
@@ -48,7 +53,9 @@ class Test extends React.Component {
     render() {
         return (
             <div>
-                <h1>{this.state.high}</h1>
+                <h2>Current Temperature in Atlanta: {this.state.current}</h2>
+                <h3>Today's High: { this.state.high }</h3>
+                <h3>Today's Low: { this.state.low }</h3>
 
             </div>
         )

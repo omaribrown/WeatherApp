@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Test from './Test'
 
 
 
@@ -47,7 +48,7 @@ export default function NavBar() {
 function Home() {
   return (
     <div>
-      <h1>Today</h1>
+      <Test />
     </div>
   );
 }
