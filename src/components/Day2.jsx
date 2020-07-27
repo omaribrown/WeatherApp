@@ -15,6 +15,7 @@ class Day2 extends React.Component {
             icon: [],
             iconImg: [],
             dateRaw: [],
+            dateConv: [],
         }
     }
     
@@ -26,22 +27,30 @@ class Day2 extends React.Component {
             this.setState({ icon: result.data.daily[day].weather[0].icon})
             this.setState({ iconImg: `http://openweathermap.org/img/wn/${this.state.icon}@2x.png`})
             this.setState({ dateRaw: result.data.daily[day].dt})
-            console.log(this.state.dateRaw)
         }
         catch {
             console.error("somethings not right brah")
         }
     }
 
+    convertDate(someprop) {
+        let timestamp = someprop;
+        let milliseconds = timestamp * 1000
+        let dateObj = new Date(milliseconds)
+        let readableDate = dateObj.toLocaleString("en-US", {weekday: 'long'})
+        return readableDate
+    }
     componentDidMount() {
         this.getWeather()
         console.log(day + 1)
-
     }
+
+
 
     render() {
         return (
             <div>
+                <h2>{this.convertDate( this.state.dateRaw )}</h2>
                 <h3>Day {day + 1}'s High: { this.state.high }</h3>
                 <h3>Day {day + 1}'s Low: { this.state.low }</h3>
                 <img src={this.state.iconImg} />
