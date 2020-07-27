@@ -48,6 +48,11 @@ export default class WeeklyForecast extends React.Component {
         console.log(day + 1)
     }
 
+
+// LINK EVERY OTHER DAY TO THE RETURN BELOW
+
+
+
     render() {
         return (
             <div>
