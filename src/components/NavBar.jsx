@@ -6,7 +6,6 @@ import {
   Link
 } from "react-router-dom";
 
-const API_KEY = "61ad8827b626c5fad8ae7a0ba951db32";
 
 
 export default function NavBar() {
