@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import Today from './Today';
+import WeeklyForecast from './WeeklyForecast';
 import Day2 from './Day2';
 import Day3 from './Day3'
 import Day4 from './Day4';
@@ -50,6 +51,7 @@ export default function NavBar() {
         <Switch>
           <Route path="/today">
             <Today />
+            <WeeklyForecast />
           </Route>
           <Route path="/day2">
             <Day2 />
