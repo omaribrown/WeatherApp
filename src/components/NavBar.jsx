@@ -13,13 +13,13 @@ export default function NavBar() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Today</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/monday">Monday</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/tuesday">Tuesday</Link>
             </li>
           </ul>
         </nav>
@@ -27,11 +27,11 @@ export default function NavBar() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/monday">
+            <Monday />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/tuesday">
+            <Tuesday />
           </Route>
           <Route path="/">
             <Home />
@@ -43,13 +43,25 @@ export default function NavBar() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return (
+    <div>
+      <h1>Today</h1>
+    </div>
+  );
 }
 
-function About() {
-  return <h2>About</h2>;
+function Monday() {
+  return (
+    <div>
+      <h1>Monday</h1>
+    </div>
+  );
 }
 
-function Users() {
-  return <h2>Users</h2>;
+function Tuesday() {
+  return (
+    <div>
+      <h1>Tuesday</h1>
+    </div>
+  );
 }
