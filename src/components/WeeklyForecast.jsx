@@ -52,23 +52,20 @@ export default class WeeklyForecast extends React.Component {
         return (
             <div>
                 <h2>This week in Atlanta:</h2>
-                {
-                    this.state.info.map()
-                }
-                {/* <div className='weekly-div'>
+                <div className='weekly-div'>
                     <div className='day-card'>
                         <div className='day'>
-                            
+                            <p>{this.convertDate( this.state.dateRaw )}</p>
                         </div>
                         <div className='icon'>
-
+                            <img src={this.state.iconImg} />
                         </div>
                         <div className='high-and-low'>
-                            <strong> </strong>
-
+                            <p><strong>{ this.state.high }</strong></p>
+                            <p>{ this.state.low }</p>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         )
     }
