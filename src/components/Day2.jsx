@@ -39,8 +39,8 @@ class Day2 extends React.Component {
     render() {
         return (
             <div>
-                <h3>Tomorrow's High: { this.state.high }</h3>
-                <h3>Tomorrow's Low: { this.state.low }</h3>
+                <h3>Day {day + 1}'s High: { this.state.high }</h3>
+                <h3>Day {day + 1}'s Low: { this.state.low }</h3>
                 <img src={this.state.iconImg} />
             </div>
         )
