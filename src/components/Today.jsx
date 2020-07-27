@@ -13,7 +13,7 @@ let daysOnly = `current,minutely,hourly`;
 let call = "https://api.openweathermap.org/data/2.5/onecall?lat=33.749&lon=-84.388&exclude=minutely,hourly&units=imperial&appid=61ad8827b626c5fad8ae7a0ba951db32";
 
 
-class Test extends React.Component {
+class Today extends React.Component {
     constructor() {
         super() 
 
@@ -26,7 +26,7 @@ class Test extends React.Component {
             day: [],
             description: [],
             icon: [],
-            
+
         }
     }
     
@@ -38,7 +38,7 @@ class Test extends React.Component {
             this.setState({ low: result.data.daily[0].temp.min })
             this.setState({ current: result.data.current.temp })
             console.log(this.state.low)
-            this.setState({ conditions: })
+            this.setState({ description: result.data.current.weather[0].description })
         }
         catch {
             console.error("somethings not right brah")
@@ -54,6 +54,7 @@ class Test extends React.Component {
         return (
             <div>
                 <h2>Current Temperature in Atlanta: {this.state.current}</h2>
+                <h4>{this.state.description}</h4>
                 <h3>Today's High: { this.state.high }</h3>
                 <h3>Today's Low: { this.state.low }</h3>
 
@@ -62,4 +63,4 @@ class Test extends React.Component {
     }
 }
 
-export default Test;
+export default Today;

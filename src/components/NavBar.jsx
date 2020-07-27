@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Test from './Test'
+import Today from './Today'
 
 
 
@@ -37,7 +37,7 @@ export default function NavBar() {
             <Tuesday />
           </Route>
           <Route path="/">
-            <Home />
+            <Today />
           </Route>
         </Switch>
       </div>
@@ -45,13 +45,13 @@ export default function NavBar() {
   );
 }
 
-function Home() {
-  return (
-    <div>
-      <Test />
-    </div>
-  );
-}
+// function Home() {
+//   return (
+//     <div>
+//       <Today />
+//     </div>
+//   );
+// }
 
 function Monday() {
   return (
