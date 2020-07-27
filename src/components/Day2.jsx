@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 let call = "https://api.openweathermap.org/data/2.5/onecall?lat=33.749&lon=-84.388&exclude=minutely,hourly&units=imperial&appid=61ad8827b626c5fad8ae7a0ba951db32";
+let day = 1;
 
 
 class Day2 extends React.Component {
@@ -19,10 +20,9 @@ class Day2 extends React.Component {
     async getWeather() {
         try {
             const result = await axios.get(call)
-            this.setState({ high: result.data.daily[1].temp.max })
-            this.setState({ low: result.data.daily[1].temp.min })
-            this.setState({ icon: result.data.daily[1].weather[0].icon})
-            console.log(this.state.icon)
+            this.setState({ high: result.data.daily[day].temp.max })
+            this.setState({ low: result.data.daily[day].temp.min })
+            this.setState({ icon: result.data.daily[day].weather[0].icon})
             this.setState({ iconImg: `http://openweathermap.org/img/wn/${this.state.icon}@2x.png`})
         }
         catch {
@@ -32,8 +32,7 @@ class Day2 extends React.Component {
 
     componentDidMount() {
         this.getWeather()
-        // this.getWeatherIcon()
-        console.log("day2")
+        console.log(day)
 
     }
 
