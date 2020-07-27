@@ -7,6 +7,11 @@ import {
 } from "react-router-dom";
 import Today from './Today';
 import Day2 from './Day2';
+import Day3 from './Day3'
+import Day4 from './Day4';
+import Day5 from './Day5'
+import Day6 from './Day6';
+
 
 
 
@@ -50,10 +55,10 @@ export default function NavBar() {
             <Day2 />
           </Route>
           <Route path="/day3">
-            <Day2 />
+            <Day3 />
           </Route>
           <Route path="/day4">
-            <Day2 />
+            <Day4 />
           </Route>
           <Route path="/day5">
             <Day2 />
