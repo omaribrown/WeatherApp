@@ -62,7 +62,7 @@ class Today extends React.Component {
                 <h3>Today's Low: { this.state.low }</h3>
 
                 <hr />
-                <WeeklyForecast />
+                {/* <WeeklyForecast /> */}
             </div>
         )
     }

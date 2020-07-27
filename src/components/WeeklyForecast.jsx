@@ -70,6 +70,18 @@ export default class WeeklyForecast extends React.Component {
                             <p>{ this.state.low }</p>
                         </div>
                     </div>
+                    <div className='day-card'>
+                        <div className='day'>
+                            <p>{this.convertDate( this.state.dateRaw )}</p>
+                        </div>
+                        <div className='icon'>
+                            <img src={this.state.iconImg} />
+                        </div>
+                        <div className='high-and-low'>
+                            <p><strong>{ this.state.high }</strong></p>
+                            <p>{ this.state.low }</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
