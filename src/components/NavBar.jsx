@@ -17,7 +17,7 @@ export default function NavBar() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Today</Link>
+              <Link to="/today">Today</Link>
             </li>
             <li>
               <Link to="/day2">day2</Link>
@@ -43,27 +43,27 @@ export default function NavBar() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/">
+          <Route path="/today">
             <Today />
           </Route>
           <Route path="/day2">
             <Day2 />
           </Route>
-          {/* <Route path="/day3">
-            <TodaDayy />
+          <Route path="/day3">
+            <Day2 />
           </Route>
-          <Route path="/monday">
-            <Monday />
+          <Route path="/day4">
+            <Day2 />
           </Route>
-          <Route path="/tuesday">
-            <Tuesday />
+          <Route path="/day5">
+            <Day2 />
           </Route>
-          <Route path="/">
+          <Route path="/day6">
             <Today />
           </Route>
-          <Route path="/">
-            <Today /> */}
-          {/* </Route> */}
+          <Route path="/day7">
+            <Today /> 
+          </Route>
         </Switch>
       </div>
     </Router>
@@ -78,13 +78,13 @@ export default function NavBar() {
 //   );
 // }
 
-function Monday() {
-  return (
-    <div>
-      <h1>Monday</h1>
-    </div>
-  );
-}
+// function Monday() {
+//   return (
+//     <div>
+//       <h1>Monday</h1>
+//     </div>
+//   );
+// }
 
 // function Tuesday() {
 //   return (

@@ -31,10 +31,9 @@ class Day2 extends React.Component {
     }
 
     componentDidMount() {
-        console.log(call)
         this.getWeather()
         // this.getWeatherIcon()
-        console.log("tuesday")
+        console.log("day2")
 
     }
 
