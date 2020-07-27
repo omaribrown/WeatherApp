@@ -4,7 +4,7 @@ import axios from 'axios'
 let call = "https://api.openweathermap.org/data/2.5/onecall?lat=33.749&lon=-84.388&exclude=minutely,hourly&units=imperial&appid=61ad8827b626c5fad8ae7a0ba951db32";
 
 
-class Tuesday extends React.Component {
+class Day2 extends React.Component {
     constructor() {
         super() 
 
@@ -49,4 +49,4 @@ class Tuesday extends React.Component {
     }
 }
 
-export default Tuesday;
+export default Day2;

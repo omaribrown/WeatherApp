@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import Today from './Today';
-import Tuesday from './Tuesday';
+import Day2 from './Day2';
 
 
 
@@ -20,10 +20,22 @@ export default function NavBar() {
               <Link to="/">Today</Link>
             </li>
             <li>
-              <Link to="/monday">Monday</Link>
+              <Link to="/day2">day2</Link>
             </li>
             <li>
-              <Link to="/tuesday">Tuesday</Link>
+              <Link to="/day3">day3</Link>
+            </li>
+            <li>
+              <Link to="/day4">day4</Link>
+            </li>
+            <li>
+              <Link to="/day5">day5</Link>
+            </li>
+            <li>
+              <Link to="/day6">day6</Link>
+            </li>
+            <li>
+              <Link to="/day7">day7</Link>
             </li>
           </ul>
         </nav>
@@ -31,6 +43,15 @@ export default function NavBar() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/">
+            <Today />
+          </Route>
+          <Route path="/day2">
+            <Day2 />
+          </Route>
+          {/* <Route path="/day3">
+            <TodaDayy />
+          </Route>
           <Route path="/monday">
             <Monday />
           </Route>
@@ -40,6 +61,9 @@ export default function NavBar() {
           <Route path="/">
             <Today />
           </Route>
+          <Route path="/">
+            <Today /> */}
+          {/* </Route> */}
         </Switch>
       </div>
     </Router>
