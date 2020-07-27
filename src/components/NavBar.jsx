@@ -5,7 +5,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Today from './Today'
+import Today from './Today';
+import Tuesday from './Tuesday';
 
 
 
@@ -61,10 +62,10 @@ function Monday() {
   );
 }
 
-function Tuesday() {
-  return (
-    <div>
-      <h1>Tuesday</h1>
-    </div>
-  );
-}
+// function Tuesday() {
+//   return (
+//     <div>
+//       <h1>Tuesday</h1>
+//     </div>
+//   );
+// }

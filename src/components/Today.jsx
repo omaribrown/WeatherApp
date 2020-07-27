@@ -4,10 +4,10 @@ import axios from 'axios'
 
 // api call 
 
-const lat = `33.749`;
-const lon = `-84.388`;
-const API_KEY = `61ad8827b626c5fad8ae7a0ba951db32`;
-let daysOnly = `current,minutely,hourly`;
+// const lat = `33.749`;
+// const lon = `-84.388`;
+// const API_KEY = `61ad8827b626c5fad8ae7a0ba951db32`;
+// let daysOnly = `current,minutely,hourly`;
 // let call = 'https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon=' + lon + '&exclude=' + daysOnly + '&appid=' + API_KEY;
 // let call2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${daysOnly}&appid=${API_KEY}`;
 let call = "https://api.openweathermap.org/data/2.5/onecall?lat=33.749&lon=-84.388&exclude=minutely,hourly&units=imperial&appid=61ad8827b626c5fad8ae7a0ba951db32";
