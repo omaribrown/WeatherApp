@@ -14,6 +14,7 @@ class Day2 extends React.Component {
             low: [],
             icon: [],
             iconImg: [],
+            dateRaw: [],
         }
     }
     
@@ -24,6 +25,8 @@ class Day2 extends React.Component {
             this.setState({ low: result.data.daily[day].temp.min })
             this.setState({ icon: result.data.daily[day].weather[0].icon})
             this.setState({ iconImg: `http://openweathermap.org/img/wn/${this.state.icon}@2x.png`})
+            this.setState({ dateRaw: result.data.daily[day].dt})
+            console.log(this.state.dateRaw)
         }
         catch {
             console.error("somethings not right brah")
@@ -32,7 +35,7 @@ class Day2 extends React.Component {
 
     componentDidMount() {
         this.getWeather()
-        console.log(day)
+        console.log(day + 1)
 
     }
 
