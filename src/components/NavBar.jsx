@@ -12,6 +12,7 @@ import Day3 from './Day3'
 import Day4 from './Day4';
 import Day5 from './Day5'
 import Day6 from './Day6';
+import Day7 from './Day7';
 
 
 
@@ -63,10 +64,10 @@ export default function NavBar() {
             <Day4 />
           </Route>
           <Route path="/day5">
-            <Day2 />
+            <Day5 />
           </Route>
           <Route path="/day6">
-            <Today />
+            <Day6 />
           </Route>
           <Route path="/day7">
             <Today /> 
