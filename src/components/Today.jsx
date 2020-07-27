@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import WeeklyForecast from './WeeklyForecast';
 
 
 // api call 
@@ -60,6 +61,8 @@ class Today extends React.Component {
                 <h3>Today's High: { this.state.high }</h3>
                 <h3>Today's Low: { this.state.low }</h3>
 
+                <hr />
+                <WeeklyForecast />
             </div>
         )
     }
