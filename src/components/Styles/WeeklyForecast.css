@@ -1,0 +1,10 @@
+.days-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+}
+
+.day-card {
+    border: black solid;
+    border-radius: 10%;
+}

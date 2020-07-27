@@ -1,7 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import WeeklyForecast from './WeeklyForecast';
-
 
 // api call 
 
@@ -26,6 +24,7 @@ class Today extends React.Component {
             description: [],
             icon: [],
             iconImg: [],
+            dateRaw: [],
 
         }
     }
@@ -41,6 +40,8 @@ class Today extends React.Component {
             this.setState({ icon: result.data.current.weather[0].icon })
             this.setState({ iconImg: `http://openweathermap.org/img/wn/${this.state.icon}@2x.png`})
             this.setState({ description: result.data.current.weather[0].description })
+            this.setState({ dateRaw: result.data.daily[0].dt})
+
         }
         catch {
             console.error("somethings not right brah")
@@ -52,17 +53,21 @@ class Today extends React.Component {
         console.log('today')
     }
 
+    convertDate(someprop) {
+        let timestamp = someprop;
+        let milliseconds = timestamp * 1000
+        let dateObj = new Date(milliseconds)
+        let readableDate = dateObj.toLocaleString("en-US", {weekday: 'long'})
+        return readableDate;
+    }
+
     render() {
         return (
             <div>
-                <h2>Current Temperature in Atlanta: {this.state.current}</h2>
-                <h4>{this.state.description}</h4>
+                <h2>{this.convertDate( this.state.dateRaw )}</h2>
+                <h3>High: { this.state.high }</h3>
+                <h3>Low: { this.state.low }</h3>
                 <img src={this.state.iconImg} />
-                <h3>Today's High: { this.state.high }</h3>
-                <h3>Today's Low: { this.state.low }</h3>
-
-                <hr />
-                {/* <WeeklyForecast /> */}
             </div>
         )
     }

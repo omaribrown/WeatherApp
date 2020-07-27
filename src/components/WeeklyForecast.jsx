@@ -1,5 +1,13 @@
 import React from 'react'
 import axios from 'axios'
+import Today from './Today';
+import Day2 from './Day2';
+import Day3 from './Day3'
+import Day4 from './Day4';
+import Day5 from './Day5'
+import Day6 from './Day6';
+import Day7 from './Day7';
+import './Styles/WeeklyForecast.css'
 
 let day = 1;
 const API_KEY = `61ad8827b626c5fad8ae7a0ba951db32`;
@@ -57,32 +65,55 @@ export default class WeeklyForecast extends React.Component {
         return (
             <div>
                 <h2>This week in Atlanta:</h2>
-                <div className='weekly-div'>
+                <div className='days-container'>
                     <div className='day-card'>
-                        <div className='day'>
-                            <p>{this.convertDate( this.state.dateRaw )}</p>
-                        </div>
-                        <div className='icon'>
-                            <img src={this.state.iconImg} />
-                        </div>
-                        <div className='high-and-low'>
-                            <p><strong>{ this.state.high }</strong></p>
-                            <p>{ this.state.low }</p>
-                        </div>
+                        <Today />
                     </div>
                     <div className='day-card'>
-                        <div className='day'>
-                            <p>{this.convertDate( this.state.dateRaw )}</p>
-                        </div>
-                        <div className='icon'>
-                            <img src={this.state.iconImg} />
-                        </div>
-                        <div className='high-and-low'>
-                            <p><strong>{ this.state.high }</strong></p>
-                            <p>{ this.state.low }</p>
-                        </div>
+                        <Day2 />
+                    </div>
+                    <div className='day-card'>
+                        <Day3 />
+                    </div>
+                    <div className='day-card'>
+                        <Day4 />
+                    </div>
+                    <div className='day-card'>
+                        <Day5 />
+                    </div>
+                    <div className='day-card'>
+                        <Day6 />
+                    </div>
+                    <div className='day-card'>
+                        <Day7 />
                     </div>
                 </div>
+                {/* <div className='weekly-div'>
+                    <div className='day-card'>
+                        <div className='day'>
+                            <p>{this.convertDate( this.state.dateRaw )}</p>
+                        </div>
+                        <div className='icon'>
+                            <img src={this.state.iconImg} />
+                        </div>
+                        <div className='high-and-low'>
+                            <p><strong>{ this.state.high }</strong></p>
+                            <p>{ this.state.low }</p>
+                        </div>
+                    </div>
+                    <div className='day-card'>
+                        <div className='day'>
+                            <p>{this.convertDate( this.state.dateRaw )}</p>
+                        </div>
+                        <div className='icon'>
+                            <img src={this.state.iconImg} />
+                        </div>
+                        <div className='high-and-low'>
+                            <p><strong>{ this.state.high }</strong></p>
+                            <p>{ this.state.low }</p>
+                        </div>
+                    </div>
+                </div> */}
             </div>
         )
     }

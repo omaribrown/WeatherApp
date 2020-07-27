@@ -6,7 +6,9 @@ import NavBar from './components/NavBar'
 function App() {
   return (
     <div className="App">
+      <h1>Check the weather for Atlanta!</h1>
       <NavBar />
+
       {/* <WeeklyForecast /> */}
       {/* <Test /> */}
     </div>

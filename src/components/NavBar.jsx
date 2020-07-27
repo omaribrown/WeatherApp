@@ -13,7 +13,7 @@ import Day4 from './Day4';
 import Day5 from './Day5'
 import Day6 from './Day6';
 import Day7 from './Day7';
-
+import './Styles/NavBar.css'
 
 
 
@@ -51,7 +51,6 @@ export default function NavBar() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/today">
-            <Today />
             <WeeklyForecast />
           </Route>
           <Route path="/day2">
@@ -70,34 +69,10 @@ export default function NavBar() {
             <Day6 />
           </Route>
           <Route path="/day7">
-            <Today /> 
+            <Day7 /> 
           </Route>
         </Switch>
       </div>
     </Router>
   );
 }
-
-// function Home() {
-//   return (
-//     <div>
-//       <Today />
-//     </div>
-//   );
-// }
-
-// function Monday() {
-//   return (
-//     <div>
-//       <h1>Monday</h1>
-//     </div>
-//   );
-// }
-
-// function Tuesday() {
-//   return (
-//     <div>
-//       <h1>Tuesday</h1>
-//     </div>
-//   );
-// }

@@ -51,8 +51,8 @@ class Day4 extends React.Component {
         return (
             <div>
                 <h2>{this.convertDate( this.state.dateRaw )}</h2>
-                <h3>Day {day + 1}'s High: { this.state.high }</h3>
-                <h3>Day {day + 1}'s Low: { this.state.low }</h3>
+                <h3>High: { this.state.high }</h3>
+                <h3>Low: { this.state.low }</h3>
                 <img src={this.state.iconImg} />
             </div>
         )
