@@ -11,6 +11,7 @@ export default class WeeklyForecast extends React.Component {
         super() 
 
         this.state = {
+            info: [],
             high: [],
             low: [],
             icon: [],
@@ -23,6 +24,7 @@ export default class WeeklyForecast extends React.Component {
     async getWeather() {
         try {
             const result = await axios.get(call)
+            this.setState({ info: result.data })
             this.setState({ high: result.data.daily[day].temp.max })
             this.setState({ low: result.data.daily[day].temp.min })
             this.setState({ icon: result.data.daily[day].weather[0].icon})
@@ -50,7 +52,10 @@ export default class WeeklyForecast extends React.Component {
         return (
             <div>
                 <h2>This week in Atlanta:</h2>
-                <div className='weekly-div'>
+                {
+                    this.state.info.map()
+                }
+                {/* <div className='weekly-div'>
                     <div className='day-card'>
                         <div className='day'>
                             
@@ -63,7 +68,7 @@ export default class WeeklyForecast extends React.Component {
 
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }
